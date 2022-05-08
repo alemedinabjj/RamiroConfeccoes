@@ -82,12 +82,7 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination'
   },
-  breakpoints: {
-    767: {
-        slidesPerView: 2,
-        setWrapperSize: false
-    }
-  },
+
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -130,6 +125,7 @@ ScrollReveal({
 
   const initialColors = {
     bg: getStyle(html, '--bg'),
+    brandDark: getStyle(html, '--brand-dark'),
     paragraph: getStyle(html, '--paragraph'),
     primaryColor: getStyle(html, '--primary-color'),
     brandBeige: getStyle(html, '--brand-beige'),
@@ -139,9 +135,10 @@ ScrollReveal({
   }
 
   const darkMode = {
+    brandDark: '#0a2b9c',
     paragraph: '#fff',
     brandLight: '#333',
-    brandBeige: '#3f3f3f',
+    brandBeige: '#212121',
     bg: '#333333',
     primaryColor: '#3664FF',
     headline: '#3664FF',

@@ -157,6 +157,19 @@ button {
 #home .button:hover {
   background: var(--brand-dark);
 }
+.divider-1 {
+  height: 2px;
+  background: linear-gradient(278deg,
+  var(--primary-color),
+  var(--brand-light));
+}
+.divider-2 {
+  height: 2px;
+  background: linear-gradient(270deg,
+  var(--brand-light),
+  var(--primary-color));
+}
+
 
 :root {
 
@@ -517,7 +530,7 @@ body.menu-expended .title {
   border-radius: .6rem;
 }
 .card circle{
-  fill: var(--brand-light);
+  fill: var(--brand-beige);
 }
 .card h3 {
   margin-block: 1.6rem;
@@ -642,7 +655,6 @@ footer li {
     }
     .swiper {
       width: 95rem;
-   
     }
    
     /* =============== Navigation =============*/
@@ -813,10 +825,7 @@ footer li {
     #home img {
       width: min(50rem, 100%);
     }
-    .cards {
-      display: flex;
-      gap: .3rem;
-    }
+  
     nav#navigation .toggle {
       display: none;
     }
