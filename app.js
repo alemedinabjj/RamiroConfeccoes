@@ -76,12 +76,28 @@ function clickMenu() {
 
 
 const swiper = new Swiper('.swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides:true,
+  autoplay:{
+    delay:3000,
+    disableOnInteraction:false,
+  },
+  slidesPerview:'auto',
+  coverflowEffect: {
+    rotate:50,
+    stretch:0,
+    depth:100,
+    modifier:1,
+    slideShadows:true,
+  },
   // Optional parameters
   slidesPerview: 1,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination'
   },
+  
 
   // Navigation arrows
   navigation: {
@@ -89,6 +105,7 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev'
   }
 })
+
 
 ScrollReveal({
   origin: 'top',
