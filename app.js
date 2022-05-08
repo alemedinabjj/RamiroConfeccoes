@@ -1,10 +1,12 @@
+window.addEventListener('scroll', theScroll)
+theScroll()
 function theScroll() {
-  if (scrollY > 0) {
-    navigation.classList.add('scroll')
-  } else {
-    navigation.classList.remove('scroll')
-  }
-
+  showTheNumbers()
+  backToTopButtonOnScroll()
+  showNavOnScroll()
+}
+function showTheNumbers() {
+   
   if (scrollY > 110 && scrollY < 150) {
     const numero = document.querySelector('#clientes')
     let min = 400
@@ -37,7 +39,21 @@ function theScroll() {
     }, 100)
   }
 }
+function showNavOnScroll() {
+  if (scrollY > 0) {
+    navigation.classList.add('scroll')
+  } else {
+    navigation.classList.remove('scroll')
+  }
+}
 
+function backToTopButtonOnScroll(){
+  if (scrollY > 500) {
+    backToTopButton.classList.add('show')
+  }else {
+    backToTopButton.classList.remove('show')
+  }
+}
 
 
 const btnMenu = document.querySelector('.btnmenu')
@@ -88,7 +104,10 @@ ScrollReveal({
   #about header,
   #about .content,
   #about img,
-  #testimonials
+  #testimonials header,
+  #testimonials .content,
+  #contact header,
+  #contact .content
   
   `)
 
