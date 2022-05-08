@@ -74,6 +74,7 @@ function clickMenu() {
   btnMenu.classList.toggle('change')
 }
 
+
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   slidesPerview: 1,
@@ -81,7 +82,12 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination'
   },
-
+  breakpoints: {
+    767: {
+        slidesPerView: 2,
+        setWrapperSize: false
+    }
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -111,4 +117,44 @@ ScrollReveal({
   
   `)
 
+
+  //  DARK MODE 
+
+  const html = document.querySelector('html')
+  console.log(html)
+  const checkbox = document.querySelector('input[name=theme]')
+
+  const getStyle = (element, style) => 
+  window.getComputedStyle(element)
+  .getPropertyValue(style)
+
+  const initialColors = {
+    bg: getStyle(html, '--bg'),
+    primaryColor: getStyle(html, '--primary-color'),
+    brandBeige: getStyle(html, '--brand-beige'),
+    brandLight: getStyle(html, '--brand-light'),
+    headline: getStyle(html, '--headline'),
+    colorText: getStyle(html, '--color-text')
+  }
+
+  const darkMode = {
+    brandLight: '#d3d3d3',
+    brandBeige: '#a9a9a9',
+    bg: '#333333',
+    primaryColor: '#003e1f',
+    headline: '#3664FF',
+    colorText: '#B5B5B5'
+  }
+
+  const transformKeys = key => '--' + key.replace(/([A-Z])/, '-$1').toLowerCase()
+
+  const changeColors = (colors) => {
+    Object.keys(colors).map(key =>
+      html.style.setProperty(transformKeys(key), colors[key])
+      )
+  }
+
+  checkbox.addEventListener('change', ({target}) =>{
+    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+  })
 

@@ -17,12 +17,13 @@
 <body>
 
   <nav id="navigation" class="">
-
+    
     <div class="wrapper">
       <a class="logo" href="#home"> 
         <h3><span class="title">Ramiro</span><span class="secondTitle">Confecções</span><span class="title">.</span> </h3></a>
           <div class="menu">
             <ul class="menu-ul">
+            
               <li><a class="" onclick="clickMenu()" href="#home">Início</a></li>
               <li><a onclick="clickMenu()" href="#services">Serviços</a></li>
               <li><a onclick="clickMenu()" href="#about">Sobre</a></li>
@@ -54,6 +55,11 @@
                 </svg>
                 </li>
             </ul>
+            <div class="toggle">
+              Dark Mode
+              <input id="switch" type="checkbox" name="theme">
+              <label for="switch">Toggle</label>
+          </div>
           </div>
           <div class="btnmenu" id="btnmenu" onclick="clickMenu()">
             <div class="bar1 bar"></div>
@@ -115,7 +121,7 @@
         <h4>Serviços</h4>
         <h2>Como podemos ajudá-lo?</h2>
       </header>
-      <div class="swiper">
+      <div>
         <div class="content swiper">
           <div class="cards swiper-wrapper">
             <div class="card swiper-slide">
