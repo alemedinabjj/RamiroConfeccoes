@@ -655,6 +655,7 @@ footer li {
     nav#navigation a.logo .secondTitle,
     nav#navigation.scroll a.logo .secondTitle {
       color: var(--logo-color);
+      font-weight: bold;
     }
     nav#navigation.scroll a.logo .title {
       color: var(--brand-beige);
