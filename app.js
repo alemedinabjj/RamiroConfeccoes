@@ -4,6 +4,11 @@ function theScroll() {
   showTheNumbers()
   backToTopButtonOnScroll()
   showNavOnScroll()
+  activateMenuAtCurrentSection(home)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(contact)
+  activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(testimonials)
 }
 function showTheNumbers() {
    
@@ -174,3 +179,77 @@ ScrollReveal({
     target.checked ? changeColors(darkMode) : changeColors(initialColors)
   })
 
+
+  // menu ativo conforme seção visivel na pagina.
+
+
+
+
+
+  function activateMenuAtCurrentSection(section) {
+    const targetLine = scrollY + innerHeight / 2
+
+    //verificar se a seção passou da linha
+    // quais dados vou precisar?
+
+      // o topo da seção 
+    const sectionTop = section.offsetTop
+
+    //a altura da seção.
+    const sectionHeight = section.offsetHeight
+
+    // o topo da seção chegou ou ultrapassou a linha alvo.
+    const sectionTopReachOrPassedTargetline = targetLine >= sectionTop
+
+
+
+
+
+    console.log(sectionTopReachOrPassedTargetline)
+    //verificar se a base está a baixo da linha alvo
+    // quais dados vou precisar ?
+
+    const sectionEndsAt = sectionTop + sectionHeight
+
+    // o final da seção passou da linha alvo
+    const sectionEndPassedTargetline = sectionEndsAt <= targetLine
+
+    //limites da seção
+    const sectionBoundaries = sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline 
+    const sectionId = section.getAttribute('id')
+    const menuElement = document.querySelector(`.menu a[href*=${sectionId}`)
+
+    menuElement.classList.remove('active')
+    if (sectionBoundaries) {
+      menuElement.classList.add('active')
+    }
+
+
+
+  }
+
+
+
+//   const sections = document.querySelectorAll('section[id]')
+//   function activateMenuAtCurrentSection() {
+//   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+//   for (const section of sections) {
+//     const sectionTop = section.offsetTop
+//     const sectionHeight = section.offsetHeight
+//     const sectionId = section.getAttribute('id')
+
+//     const checkpointStart = checkpoint >= sectionTop
+//     const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+//     if (checkpointStart && checkpointEnd) {
+//       document
+//         .querySelector('.menu-ul li a[href*=' + sectionId + ']')
+//         .classList.add('active')
+//     } else {
+//       document
+//         .querySelector('.menu-ul li a[href*=' + sectionId + ']')
+//         .classList.remove('active')
+//     }
+//   }
+// }
