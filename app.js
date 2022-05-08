@@ -141,7 +141,7 @@ ScrollReveal({
   const darkMode = {
     paragraph: '#fff',
     brandLight: '#333',
-    brandBeige: '#a9a9a9',
+    brandBeige: '#3f3f3f',
     bg: '#333333',
     primaryColor: '#3664FF',
     headline: '#3664FF',
