@@ -5,7 +5,7 @@ function theScroll() {
     navigation.classList.remove('scroll')
   }
 
-  if (scrollY == 0) {
+  if (scrollY > 110 && scrollY < 150) {
     const numero = document.querySelector('#clientes')
     let min = 400
     let max = 500
@@ -87,7 +87,8 @@ ScrollReveal({
   #about, 
   #about header,
   #about .content,
-  #about img
+  #about img,
+  #testimonials
   
   `)
 
