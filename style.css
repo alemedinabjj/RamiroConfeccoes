@@ -512,8 +512,8 @@ body.menu-expended .title {
   width: min(50rem, 100%);
   padding: 3.4rem;
   text-align: left;
-  background: white;
-  border: 1px solid var(--brand-light);
+  background: var(--brand-light);
+  border: 1px solid var(--bg-light);
   border-radius: .6rem;
 }
 .card circle{

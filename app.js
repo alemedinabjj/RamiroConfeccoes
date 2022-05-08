@@ -130,6 +130,7 @@ ScrollReveal({
 
   const initialColors = {
     bg: getStyle(html, '--bg'),
+    paragraph: getStyle(html, '--paragraph'),
     primaryColor: getStyle(html, '--primary-color'),
     brandBeige: getStyle(html, '--brand-beige'),
     brandLight: getStyle(html, '--brand-light'),
@@ -138,10 +139,11 @@ ScrollReveal({
   }
 
   const darkMode = {
-    brandLight: '#d3d3d3',
+    paragraph: '#fff',
+    brandLight: '#333',
     brandBeige: '#a9a9a9',
     bg: '#333333',
-    primaryColor: '#003e1f',
+    primaryColor: '#3664FF',
     headline: '#3664FF',
     colorText: '#B5B5B5'
   }
