@@ -521,13 +521,10 @@ body.menu-expended .title {
 #services header h2 {
   margin-bottom: 6rem;
 }
-.swiper {
-  width: 40rem;
-  height: 30rem;
-}
+
 .card {
   width: min(50rem, 100%);
-  padding: 3rem;
+  padding: 3.4rem;
   text-align: left;
   background: var(--brand-light);
   border: 1px solid var(--bg-light);
