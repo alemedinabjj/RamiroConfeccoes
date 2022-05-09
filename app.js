@@ -90,11 +90,11 @@ const swiper = new Swiper('.swiper', {
   },
   slidesPerview:'auto',
   coverflowEffect: {
-    rotate:50,
-    stretch:0,
+    rotate:360,
+    stretch:1000,
     depth:100,
     modifier:1,
-    slideShadows:true,
+    slideShadows:false,
   },
   // Optional parameters
   slidesPerview: 1,
@@ -138,7 +138,6 @@ ScrollReveal({
   //  DARK MODE 
 
   const html = document.querySelector('html')
-  console.log(html)
   const checkbox = document.querySelector('input[name=theme]')
 
   const getStyle = (element, style) => 
