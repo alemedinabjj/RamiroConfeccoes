@@ -666,12 +666,12 @@ footer li {
       font-size: 4rem;
       line-height: 5.2rem;
     }
-    .toggleWeb {
+    nav#navigation .toggleWeb {
       display: flex;
       align-items: center;
       flex-direction: column;
     }
-    .toggleWeb p {
+    nav#navigation .toggleWeb p {
       font-size: 1.3rem;
     }
 

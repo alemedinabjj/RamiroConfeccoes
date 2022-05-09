@@ -139,6 +139,7 @@ ScrollReveal({
 
   const html = document.querySelector('html')
   const checkbox = document.querySelector('input[name=theme]')
+  const checkboxWeb = document.querySelector('input[name=themeWeb]')
 
   const getStyle = (element, style) => 
   window.getComputedStyle(element)
@@ -177,7 +178,9 @@ ScrollReveal({
   checkbox.addEventListener('change', ({target}) =>{
     target.checked ? changeColors(darkMode) : changeColors(initialColors)
   })
-
+  checkboxWeb.addEventListener('change', ({target}) =>{
+    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+  })
 
   // menu ativo conforme seção visivel na pagina.
 
